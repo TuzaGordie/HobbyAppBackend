@@ -1,0 +1,25 @@
+<h1>Hobbies</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Hobby</th>
+      <th>Description</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% hobbies.forEach(function(hobby){ %>
+      <tr>
+        <td><%= hobby.hobby %></td>
+        <td><%= hobby.description %></td>
+        <td>
+          <a href="/hobbies/edit/:<%= hobby.id %>">Edit</a>
+          <form action="/hobbies/delete/:<%= hobby.id %>" method="post">
+            <input type="submit"  value="Delete">
+          </form>
+        </td>
+      </tr>
+  <%  }) %>
+  </tbody>
+</table>
+<a href="/hobbies/add">Add More Hobbies</a>

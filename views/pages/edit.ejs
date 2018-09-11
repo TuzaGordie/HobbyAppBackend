@@ -1,0 +1,14 @@
+<h1>Edit Hobby</h1>
+<form method="post" action="/hobbies/update/:<%=hobby.id %>" >
+  <div>
+    <label for="Hobby">Hobby</label>
+    <br>
+    <input type="text" name="hobby" value="<%=hobby.hobby%>" >
+  </div>
+  <div>
+    <label for="Description">Description</label>
+    <br>
+    <textarea name="description"><%=hobby.description%></textarea>
+  </div>
+  <input type="submit"  value="update">
+</form>
